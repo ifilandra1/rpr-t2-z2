@@ -53,7 +53,9 @@ public class Interval {
     }
 
     public String toString() {
-        String s= new String("");
+        String s= new String();
+        if( this.isNull()) return "()";
+
         if(this.b==true)s+="[";
         else s+="(";
         s+=this.v+","+this.v1;
